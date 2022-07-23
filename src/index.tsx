@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename="/InstagramPractice">
         <App />
       </BrowserRouter>
     </React.StrictMode>
