@@ -10,6 +10,8 @@ import ScreenShot3 from '../../Icon/Index/ScreenShot3.png';
 import ScreenShot4 from '../../Icon/Index/ScreenShot4.png';
 import { motion } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import './input.css';
 
 const Index: React.FunctionComponent = () => {
   const footerItemList = [
@@ -62,18 +64,20 @@ const Index: React.FunctionComponent = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setImageIndex(imageIndex => {
+      setImageIndex((imageIndex) => {
         if (imageIndex < 3) {
           return imageIndex + 1;
         } else {
           return 0;
         }
       });
-    }, 2500);
+    }, 8000);
     return () => {
       clearInterval(timer);
     };
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="flex flex-col items-center justify-center my-[25px]">
@@ -86,6 +90,7 @@ const Index: React.FunctionComponent = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
               src={ScreenShotItemList[imageIndex]}
               className="absolute top-[23px] left-[138px] w-[220px]"
             />
@@ -95,25 +100,37 @@ const Index: React.FunctionComponent = () => {
           <div className="border bg-white w-[350px] flex flex-col justify-center items-center px-[10px]">
             <img src={InstagramIcon} className="mt-10" />
             <div className="w-[350px] flex flex-col justify-center items-center">
-              <input
-                className="w-[258px] h-[36px] border p-4 my-1 mt-[50px] text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
-                placeholder="전화번호, 사용자 이름 또는 닉네임"
-                onKeyUp={ActiveIsPassedLogin}
-                onChange={inputIdHandler}
-              />
-              <input
-                className="w-[258px] h-[36px] border p-4 my-1 text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
-                type="password"
-                placeholder="비밀번호"
-                onKeyUp={ActiveIsPassedLogin}
-                onChange={inputPwHandler}
-              />
+              <div className="relative mt-[50px]">
+                <input
+                  id="id"
+                  className="w-[258px] h-[36px] border p-2 my-[2px]  text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
+                  placeholder="전화번호, 사용자 이름 또는 닉네임"
+                  onKeyUp={ActiveIsPassedLogin}
+                  onChange={inputIdHandler}
+                />
+                <label htmlFor="id">전화번호, 사용자 이름 또는 닉네임</label>
+              </div>
+              <div className="relative">
+                <input
+                  id="pw"
+                  className="w-[258px] h-[36px] border p-2 text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
+                  type="password"
+                  placeholder="비밀번호"
+                  onKeyUp={ActiveIsPassedLogin}
+                  onChange={inputPwHandler}
+                />
+                <label htmlFor="pw">비밀번호</label>
+              </div>
               <button
                 className={
                   'w-[268px] h-[30px] flex justify-center items-center bg-blue-500 text-white rounded-md mt-[20px]' +
-                  opacity + (btnLoginVisible? " hover:bg-blue-300" : " ")
+                  opacity +
+                  (btnLoginVisible ? ' hover:bg-blue-300' : ' ')
                 }
                 disabled={!btnLoginVisible}
+                onClick={() => {
+                  navigate('/main');
+                }}
               >
                 로그인
               </button>
@@ -139,8 +156,12 @@ const Index: React.FunctionComponent = () => {
           </div>
           <span className="my-[20px]"> 앱을 다운로드하세요.</span>
           <div className="flex flex-row">
-            <a href='https://play.google.com/store/apps/details?id=com.instagram.android&hl=ko&gl=US'><img src={PlayStore} className="w-[136px] h-[40px] mr-[10px] cursor-pointer" onClick={() => {}} /></a>
-            <a href='https://apps.apple.com/kr/app/instagram/id389801252'><img src={AppleStore} className="w-[136px] h-[40px] cursor-pointer" onClick={() => {}} /></a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=ko&gl=US">
+              <img src={PlayStore} className="w-[136px] h-[40px] mr-[10px] cursor-pointer" />
+            </a>
+            <a href="https://apps.apple.com/kr/app/instagram/id389801252">
+              <img src={AppleStore} className="w-[136px] h-[40px] cursor-pointer" />
+            </a>
           </div>
         </div>
       </div>
