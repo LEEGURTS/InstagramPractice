@@ -1,0 +1,21 @@
+.input::placeholder {
+  position: relative;
+  left: 20px;
+  transition: all ease-out 0.05s;
+}
+
+.input {
+  min-width: 180px;
+  max-width: 283px;
+  height: 36px;
+  background-color: #efefef;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input:focus::placeholder {
+  position: relative;
+  left: 0px;
+}

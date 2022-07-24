@@ -1,7 +1,13 @@
 import React from 'react';
+import FadeIn from '../component/FadeIn/FadeIn';
+import Feed from '../component/Feed/Feed';
 
 const FeedPage: React.FunctionComponent = () => {
-  return <div>aignoignsognopsenig</div>;
+  return (
+    <FadeIn>
+      <Feed></Feed>
+    </FadeIn>
+  );
 };
 
 export default FeedPage;

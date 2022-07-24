@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeIn from '../component/FadeIn/FadeIn';
-import Index from '../component/index/Index';
+import Index from '../component/Index/Index';
 import NarrowLayout from '../component/Layout/NarrowLayout';
 
 const IndexPage: React.FunctionComponent = () => {

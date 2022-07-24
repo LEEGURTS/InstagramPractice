@@ -1,27 +1,38 @@
-label {
+.label {
   position: absolute;
   pointer-events: none;
   left: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   transform: translateY(10px);
   line-height: 6px;
   transition: all ease-out 0.1s;
   font-size: 13px;
   color: #999;
-  padding-top: 6px;
+  padding-top: 12px;
 }
 
-input::placeholder {
+.input {
+  padding: 9px 0px 7px 9px;
+  font-size: 12px;
+  width: 258px;
+  margin-top: 6px;
+  height: 36px;
+  outline: none;
+  background: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+.input::placeholder {
   visibility: hidden;
 }
 
-input:not(:placeholder-shown) + label {
+.input:not(:placeholder-shown) + label {
   transform: translateY(0);
   font-size: 11px;
 }
 
 /* input padding increases if placeholder is not shown */
-input:not(:placeholder-shown) {
+.input:not(:placeholder-shown) {
   padding-top: 14px;
   padding-bottom: 2px;
 }

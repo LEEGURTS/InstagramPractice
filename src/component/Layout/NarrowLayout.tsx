@@ -6,9 +6,7 @@ interface Props {
 
 const NarrowLayout: React.FunctionComponent<Props> = ({ children }) => {
   return (
-    <div className="w-full w-min-[400px] flex items-center min-h-screen text-sm">
-      <div className="flex mx-auto md:w-[768px] p-1">{children}</div>
-    </div>
+    <div className="w-min-[400px] flex items-center mx-auto md:w-[768px] p-1 min-h-screen text-sm">{children}</div>
   );
 };
 

@@ -11,7 +11,7 @@ import ScreenShot4 from '../../Icon/Index/ScreenShot4.png';
 import { motion } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import './input.css';
+import styles from './input.module.css';
 
 const Index: React.FunctionComponent = () => {
   const footerItemList = [
@@ -83,7 +83,7 @@ const Index: React.FunctionComponent = () => {
     <div className="flex flex-col items-center justify-center my-[25px]">
       <div className="flex items-center mx-auto my-auto">
         <div className="relative hidden md:flex">
-          <img src={PhoneBorder} className="" />
+          <img src={PhoneBorder} alt="오류" className="" />
           <AnimatePresence>
             <motion.img
               key={imageIndex}
@@ -93,33 +93,38 @@ const Index: React.FunctionComponent = () => {
               transition={{ duration: 1 }}
               src={ScreenShotItemList[imageIndex]}
               className="absolute top-[23px] left-[138px] w-[220px]"
+              alt="오류"
             />
           </AnimatePresence>
         </div>
         <div className="flex flex-col items-center justify-center mx-auto">
           <div className="border bg-white w-[350px] flex flex-col justify-center items-center px-[10px]">
-            <img src={InstagramIcon} className="mt-10" />
+            <img src={InstagramIcon} alt="오류" className="mt-10" />
             <div className="w-[350px] flex flex-col justify-center items-center">
               <div className="relative mt-[50px]">
                 <input
                   id="id"
-                  className="w-[258px] h-[36px] border p-2 my-[2px]  text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
+                  className={styles.input}
                   placeholder="전화번호, 사용자 이름 또는 닉네임"
                   onKeyUp={ActiveIsPassedLogin}
                   onChange={inputIdHandler}
                 />
-                <label htmlFor="id">전화번호, 사용자 이름 또는 닉네임</label>
+                <label htmlFor="id" id="a" className={styles.label}>
+                  전화번호, 사용자 이름 또는 닉네임
+                </label>
               </div>
               <div className="relative">
                 <input
                   id="pw"
-                  className="w-[258px] h-[36px] border p-2 text-xs bg-gray-50 rounded-[3px] focus:outline-none focus:border-slate-500"
+                  className={styles.input}
                   type="password"
                   placeholder="비밀번호"
                   onKeyUp={ActiveIsPassedLogin}
                   onChange={inputPwHandler}
                 />
-                <label htmlFor="pw">비밀번호</label>
+                <label htmlFor="pw" id="b" className={styles.label}>
+                  비밀번호
+                </label>
               </div>
               <button
                 className={
@@ -129,7 +134,7 @@ const Index: React.FunctionComponent = () => {
                 }
                 disabled={!btnLoginVisible}
                 onClick={() => {
-                  navigate('/main');
+                  navigate('/');
                 }}
               >
                 로그인
@@ -140,7 +145,7 @@ const Index: React.FunctionComponent = () => {
                 <div className="flex-grow border-b w-[100px] border-gray-400"></div>
               </div>
               <div className="flex">
-                <img src={FacebookIcon} alt="" className="w-[25px] h-[25px]" />
+                <img src={FacebookIcon} alt="오류" className="w-[25px] h-[25px]" />
                 <button className="text-[#385185] font-semibold text-sm hover:text-slate-400">
                   Facebook으로 로그인
                 </button>
@@ -157,10 +162,10 @@ const Index: React.FunctionComponent = () => {
           <span className="my-[20px]"> 앱을 다운로드하세요.</span>
           <div className="flex flex-row">
             <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=ko&gl=US">
-              <img src={PlayStore} className="w-[136px] h-[40px] mr-[10px] cursor-pointer" />
+              <img src={PlayStore} alt="오류" className="w-[136px] h-[40px] mr-[10px] cursor-pointer" />
             </a>
             <a href="https://apps.apple.com/kr/app/instagram/id389801252">
-              <img src={AppleStore} className="w-[136px] h-[40px] cursor-pointer" />
+              <img src={AppleStore} alt="오류" className="w-[136px] h-[40px] cursor-pointer" />
             </a>
           </div>
         </div>
