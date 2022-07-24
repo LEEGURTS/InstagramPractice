@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/InstagramPractice/static/css/main.77e59c28.css",
-    "main.js": "/InstagramPractice/static/js/main.bb7c08f8.js",
+    "main.css": "/InstagramPractice/static/css/main.9650a3ee.css",
+    "main.js": "/InstagramPractice/static/js/main.39c06f05.js",
     "static/js/787.28cb0dcd.chunk.js": "/InstagramPractice/static/js/787.28cb0dcd.chunk.js",
     "static/media/ScreenShot4.png": "/InstagramPractice/static/media/ScreenShot4.8073c02a21c4c8fb4dc6.png",
     "static/media/ScreenShot2.png": "/InstagramPractice/static/media/ScreenShot2.b1eacf1f6f6f4c47a49a.png",
@@ -11,12 +11,12 @@
     "static/media/tempfeedimage.jpg": "/InstagramPractice/static/media/tempfeedimage.1307f018479349a72acb.jpg",
     "static/media/PlayStore.png": "/InstagramPractice/static/media/PlayStore.c0a603f08fc7b9f3f587.png",
     "index.html": "/InstagramPractice/index.html",
-    "main.77e59c28.css.map": "/InstagramPractice/static/css/main.77e59c28.css.map",
-    "main.bb7c08f8.js.map": "/InstagramPractice/static/js/main.bb7c08f8.js.map",
+    "main.9650a3ee.css.map": "/InstagramPractice/static/css/main.9650a3ee.css.map",
+    "main.39c06f05.js.map": "/InstagramPractice/static/js/main.39c06f05.js.map",
     "787.28cb0dcd.chunk.js.map": "/InstagramPractice/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77e59c28.css",
-    "static/js/main.bb7c08f8.js"
+    "static/css/main.9650a3ee.css",
+    "static/js/main.39c06f05.js"
   ]
 }
