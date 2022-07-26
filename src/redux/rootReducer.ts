@@ -1,5 +1,5 @@
 const initialState = {
-  isLogined: Boolean,
+  isLoginded: Boolean,
 };
 
 const rootReducer = (state = initialState, action: any) => {

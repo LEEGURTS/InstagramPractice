@@ -8,7 +8,7 @@ import FeedToolBar from './FeedToolBar';
 
 const FeedPostItem: React.FunctionComponent = () => {
   return (
-    <div className="mb-[10px]">
+    <div className="mb-[10px] bg-white">
       <FeedItemHeader></FeedItemHeader>
       <FeedImage></FeedImage>
       <FeedToolBar></FeedToolBar>

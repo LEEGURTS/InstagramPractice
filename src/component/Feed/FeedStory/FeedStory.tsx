@@ -2,9 +2,9 @@ import React from 'react';
 import FeedStoryItem from './FeedStoryItem';
 
 const FeedStory: React.FunctionComponent = () => {
-  let feedStoryItemList = [<></>];
+  let feedStoryItemList = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 1; i++) {
     feedStoryItemList.push(<FeedStoryItem></FeedStoryItem>);
   }
   return (

@@ -14,7 +14,7 @@ const Feed: React.FunctionComponent = () => {
     <div>
       <FeedBar></FeedBar>
       <div className="flex flex-row items-center justify-center text-[14px] text-[#262626]">
-        <div className="max-w-[470px] w-full min-h-screen pt-[60px]">
+        <div className="max-w-[470px] min-h-screen pt-[60px]">
           <FeedStory></FeedStory>
           {itemlist}
         </div>

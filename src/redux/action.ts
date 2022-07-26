@@ -1,3 +1,3 @@
-export const setIsLogined = (dog: any) => ({
-  payload: dog,
+export const setIsLogined = (isLoginded: any) => ({
+  payload: isLoginded,
 });

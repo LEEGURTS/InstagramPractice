@@ -6,7 +6,7 @@ import MessageEmptySvg from '../../../svg/MessageEmptySvg';
 
 const FeedToolBar: React.FunctionComponent = () => {
   return (
-    <div className="w-[470px] border-x h-[47px] flex flex-row items-center justify-between">
+    <div className="w-[470px] h-[47px] border-x border-[#d8d8d8] flex flex-row items-center justify-between">
       <div className="flex flex-row mx-[10px]">
         <LikeEmptySvg></LikeEmptySvg>
         <CommentSvg></CommentSvg>
