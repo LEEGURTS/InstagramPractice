@@ -7,7 +7,7 @@ const Feed: React.FunctionComponent = () => {
   let itemlist = [];
 
   for (let i = 0; i < 10; i++) {
-    itemlist.push(<FeedPostItem></FeedPostItem>);
+    itemlist.push(<FeedPostItem key={i}></FeedPostItem>);
   }
 
   return (

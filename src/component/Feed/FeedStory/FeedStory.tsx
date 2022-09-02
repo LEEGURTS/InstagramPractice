@@ -5,7 +5,7 @@ const FeedStory: React.FunctionComponent = () => {
   let feedStoryItemList = [];
 
   for (let i = 0; i < 1; i++) {
-    feedStoryItemList.push(<FeedStoryItem></FeedStoryItem>);
+    feedStoryItemList.push(<FeedStoryItem key={i}></FeedStoryItem>);
   }
   return (
     <div className="flex flex-row h-[135px] border rounded-[8px] overflow-x-auto scrollbar-hide items-center mt-[20px] my-[20px] bg-white">
